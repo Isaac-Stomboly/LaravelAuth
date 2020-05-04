@@ -1,8 +1,8 @@
-@extends('/layout.app')
+@extends('/layouts.app')
 
 @section('content')
     <h1>Edit Customer</h1>
-    {!! Form::open(['action' => ['CustomersController@update', $customer->custID], 'method' => 'put']) !!}
+    {!! Form::open(['action' => ['CustomersController@update', $cust->custID], 'method' => 'put']) !!}
     <div class="form-group">
         {{Form::label('firstName', 'First Name', ['class' => 'control-label'])}}
         {{Form::text('firstName', $cust->firstName, ['class' => 'form-control'])}}
